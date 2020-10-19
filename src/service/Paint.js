@@ -23,8 +23,12 @@ export class Paint {
     canvas.height = parseInt(paintStyle.getPropertyValue('height'));
     canvas.setAttribute('style', 'border: 1px dotted gray;');
 
+    // take care of the existing canvas
+    if (painting.lastChild && painting.lastChild.name === 'canvas') {
+      painting.remove(painting.lastChild);
+    }
+
     // append it to the dom
-    // TODO take care of the existing canvas
     painting.appendChild(canvas);
 
     // get context

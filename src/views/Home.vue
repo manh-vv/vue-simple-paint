@@ -60,7 +60,7 @@
         <div>
           <v-btn aria-label="wipe" @click="erase"><v-icon>mdi-eraser-variant</v-icon></v-btn>
         </div>
-        <div></div>
+        <!-- <div id="show-svg"></div> -->
       </v-col>
     </v-row>
   </v-container>

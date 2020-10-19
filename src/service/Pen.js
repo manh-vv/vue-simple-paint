@@ -44,6 +44,10 @@ export class Pen {
     ctx.lineJoin = 'round';
     ctx.lineCap = 'round';
     ctx.strokeStyle = this.color.hex;
+
+    if (this.color.alpha) {
+      this.ctx.globalAlpha = this.color.alpha;
+    }
   }
 
   startDraw(mouse) {
